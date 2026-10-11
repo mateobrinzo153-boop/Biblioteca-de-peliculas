@@ -1,23 +1,26 @@
 import biblioteca
 
-opcion = ""
-while opcion!= "4":
+opcion = int
+while opcion!= "5":
     print(""" 
     Biblioteca de peliculas:
     1. Agregar pelicula
     2. Ver lista de peliculas
-    3. Eliminar gasto
-    4. Salir
+    3. Marcar pelicula como vista
+    4. Eliminar pelicula
+    5. Salir
     """)
-    opcion = int(input("Seleccione una opción: "))
+    opcion = input("Seleccione una opción: ")
     if opcion == 1:
         biblioteca.agregar_pelicula()
     elif opcion == 2:
         biblioteca.ver_peliculas()
     elif opcion == 3:
-        biblioteca.eliminar_pelicula()
+        biblioteca.marcar_como_vista()
     elif opcion == 4:
-        pass
+        biblioteca.eliminar_pelicula()
+    elif opcion == 5:
+        break
     else:
         print("Opcion invalida.")
 print("¡Hasta luego!")
